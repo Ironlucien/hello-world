@@ -1,1 +1,29 @@
+#五 求解一元二次方程
 
+def f(a,b,c):
+    import math
+    a = int(input('请输入参数a:'))
+    while True:
+        if a==0:
+            print('参数有误请重新输入!a不等于0')
+            a=int(input('请输入参数a:'))
+        else :  
+            b = int(input('请输入参数b:'))
+            c = int(input('请输入参数c:'))
+            break
+    
+    x = math.sqrt(b*b-4*a*c)/2*b
+    y = math.sqrt(b*b+4*a*c)/2*b
+    print(f'一元二次方程{a}*X^2+{b}X+{c}=0的两个根是{x}和{y}')
+    return 
+
+f(1,2,3)
+'''
+作业更正：
+1.定义参数时未明确意义；
+2.数据类型未重视（int与str）；
+3.格式（while后冒号）
+4.函数引用不规范（math）
+5.f字符串
+6.函数格式不规范（return）
+'''
