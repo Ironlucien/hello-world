@@ -1,4 +1,4 @@
-#五 求解一元二次方程
+#5 求解一元二次方程
 
 def f(a,b,c):
     import math
@@ -27,3 +27,37 @@ f(1,2,3)
 5.f字符串
 6.函数格式不规范（return）
 '''
+#10  求解水仙花数
+import time as t
+start = t.time()
+a = 100
+while a <1000:
+    b=str(a)
+    #print(a)
+    if a == int(b[0])**3+int(b[1])**3+int(b[2])**3:
+        print(f'{a}是水仙花数')
+    a =a+1
+
+end = t.time()
+print('Running time: %s Seconds'%(end-start))
+
+'''
+作业更正2：
+在这个例子中，程序本身是很容易实现，但是已经需要考虑到运行效率问题。
+一方面，是由于基础运算本身的不熟练，这就要求需要记住可以实现同一操作的多种方法，择优进行；
+另一方面，就是对于程序运行底层机制的不了解。为何某种表达方式会优于另一种，这个还需要深入学习。
+
+'''
+
+
+#11  随机抽奖
+import random as r
+import time as t
+start = t.time()
+
+a=['张三','李四','王五','赵六','田七','刘八']
+b=r.sample(a,3)
+print('恭喜获得一等奖的是：' , b[0] ,'\n恭喜获得二等奖的是：' , b[1] ,'\n恭喜获得三等奖的是：' , b[2])
+end = t.time()
+print('Running time: %s Seconds'%(end-start))
+
