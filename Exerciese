@@ -61,3 +61,30 @@ print('恭喜获得一等奖的是：' , b[0] ,'\n恭喜获得二等奖的是：
 end = t.time()
 print('Running time: %s Seconds'%(end-start))
 
+#14  文件读写与元组
+import os 
+f = open ('C:\Users\admin\Desktop\python01_14_01.txt','r')
+
+#20  网络抓取
+from bs4 import BeautifulSoup 
+from urllib.request import urlopen
+r = urlopen('http://www.boc.cn/sourcedb/whpj/')
+c = r.read()
+d = c.decode('utf-8')
+bs_obj=BeautifulSoup(c,features = 'lxml')
+t=bs_obj.find_all('table')[1]
+tr=t.find_all('tr')
+print(t)
+
+#21  GUI
+from tkinter import Tk,Entry,Button
+def convert():
+    s=ent_hanzi.get()
+    p=pinyin.get(s)
+    ent_pinyin.insert('end',p)
+
+ent = Entry(fm_main)
+btn = Button(fm_main,text='点',command = convert)
+ent.pack()
+btn.pack()
+fm_main.mainloop()
